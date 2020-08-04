@@ -1,11 +1,14 @@
+//react
 import React from "react";
 import { View, Text, StyleSheet, Image } from "react-native";
+
+//external lib
 import moment from "moment";
 
 const OneDayCard = ({ dt, temp: { min, max }, weather }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.day}>{moment(dt * 1000).format("LL")}</Text>
+      <Text style={styles.day}>{moment(dt * 1000).format("ll")}</Text>
       <Image
         style={styles.image}
         source={{ uri: `http://openweathermap.org/img/w/${weather[0].icon}.png` }}
