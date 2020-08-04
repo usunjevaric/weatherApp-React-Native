@@ -1,25 +1,35 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, ScrollView, SafeAreaView } from "react-native";
 import { StateProvider } from "./src/context/store";
-import Application from "./components/Application";
 import Header from "./src/components/Header";
 import City from "./src/components/City";
+import Hourly from "./src/components/Hourly";
+import FiveDays from "./src/components/FiveDays";
 
 export default function App() {
   return (
     <StateProvider>
-      <Header />
-      <City />
+      <ScrollView>
+        <Header />
+        <City />
+        <Hourly />
+        <FiveDays />
+      </ScrollView>
     </StateProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: "column",
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
+
+// <StateProvider>
+// <Header />
+// <City />
+// <Hourly />
+// <FiveDays />
+// </StateProvider>

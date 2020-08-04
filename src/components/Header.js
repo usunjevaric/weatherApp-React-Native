@@ -59,7 +59,7 @@ const Header = () => {
       <TouchableOpacity onPress={() => setShowInput(true)}>
         <MaterialIcons name='add-location' size={20} color='white' />
       </TouchableOpacity>
-      <Text style={styles.cityName}>{state.city}</Text>
+      <Text style={styles.cityName}>{state.currentWeatherCast.name}</Text>
       <TouchableOpacity onPress={() => console.log("settings")}>
         <MaterialIcons name='settings' size={20} color='white' />
       </TouchableOpacity>
